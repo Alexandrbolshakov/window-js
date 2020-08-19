@@ -62,7 +62,7 @@ textarea:focus {
   margin-bottom: 2rem;
   text-align: center;
   border-radius: 1rem;
-  -moz-box-sizing: border-box;
+  /* -moz-box-sizing: border-box; */
 }
 
 .form_input::-webkit-input-placeholder {
@@ -897,6 +897,16 @@ textarea:focus {
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.popup_calc_hoses {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .popup_calc_content {
   position: fixed;
@@ -909,7 +919,26 @@ textarea:focus {
   background-color: #ffffff;
 }
 
+.popup_calc_hose_content {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 64rem;
+  padding: 1rem 0.5rem 4rem;
+  background-color: #ffffff;
+}
+
 .popup_calc_content h2 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+.popup_calc_hose_content h2 {
   margin-bottom: 3rem;
   font-size: 3rem;
   font-family: 'Open Sans', sans-serif;
@@ -922,18 +951,35 @@ textarea:focus {
   font-size: 2rem;
   margin-bottom: 3rem;
 }
+.popup_calc_hose_content h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
 
 .popup_calc_content .balcon_icons {
   margin-bottom: 1rem;
 }
+.popup_calc_hose_content .balcon_icons {
+  margin-bottom: 1rem;
+}
 
 .popup_calc_content .big_img img {
-  display: none;
+  display: block;
   margin-bottom: 3rem;
   width: 30rem;
 }
+.popup_calc_hose_content .big_img img {
+  display: none;
+  margin-bottom: 3rem;
+  width: 30srem;
+}
 
 .popup_calc_content #type1 {
+  display: inline-block;
+}
+
+
+.popup_calc_hose_content #big19 {
   display: inline-block;
 }
 
@@ -952,8 +998,23 @@ textarea:focus {
   border: none;
   background: transparent;
 }
+.popup_calc_hose_close {
+  position: absolute;
+  top: -2.2rem;
+  right: -5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
 
 .popup_calc input {
+  display: inline-block;
+  margin-bottom: 3rem;
+  width: 10rem;
+  margin-right: 0.3rem;
+}
+.popup_calc_hose input {
   display: inline-block;
   margin-bottom: 3rem;
   width: 10rem;
@@ -971,11 +1032,28 @@ textarea:focus {
   margin: 0 1rem;
 }
 
+.popup_calc_hoses .multiplication {
+  display: inline-block;
+  font-size: 2rem;
+  color: #323131;
+  margin: 0 1rem;
+}
+
 .popup_calc_button {
   padding: 1rem 5rem;
 }
 
 .popup_calc_profile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup_calc_hoses {
   display: none;
   position: fixed;
   top: 0;
@@ -1077,6 +1155,15 @@ textarea:focus {
 }
 
 .popup_calc_profile_close {
+  position: absolute;
+  top: -2.2rem;
+  right: -5rem;
+  font-size: 4rem;
+  color: #ffffff;
+  border: none;
+  background: transparent;
+}
+.popup_calc_hose_close {
   position: absolute;
   top: -2.2rem;
   right: -5rem;
@@ -1729,8 +1816,21 @@ textarea:focus {
     border: none;
     background: transparent;
   }
+  .popup_calc_hose_close {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: #000000;
+    border: none;
+    background: transparent;
+  }
 
   .popup_calc_content {
+    width: 42rem;
+  }
+
+  .popup_calc_hose_content {
     width: 42rem;
   }
 
@@ -1748,7 +1848,15 @@ textarea:focus {
     margin-bottom: 1rem;
   }
 
+  .popup_calc_hose_content .balcon_icons {
+    margin-bottom: 1rem;
+  }
+
   .popup_calc_content .balcon_icons img {
+    width: 20%;
+  }
+
+  .popup_calc_hose_content .balcon_icons img {
     width: 20%;
   }
 
@@ -1756,9 +1864,9 @@ textarea:focus {
     margin-bottom: 2rem;
     width: 25rem;
   }
-
-  .popup_calc_content #type1 {
-    display: inline-block;
+  .popup_calc_hose_content .big_img img {
+    margin-bottom: 2rem;
+    width: 25rem;
   }
 
   .popup_calc_button {
@@ -1801,6 +1909,17 @@ textarea:focus {
 
   .popup_calc_profile_button {
     padding: 1rem 5rem;
+  }
+
+
+  .popup_calc_hose_close {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: #000000;
+    border: none;
+    background: transparent;
   }
 }
 
