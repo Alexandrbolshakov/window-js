@@ -2,15 +2,8 @@ import checkNumImputs from './checkNumInputs';
 
 const forms = (state) =>{
     const form = document.querySelectorAll('form'),
-        input = document.querySelectorAll('input'),
-        phoneInputs = document.querySelectorAll('input[name="user_phone"]');
-
-        phoneInputs.forEach(item =>{
-            item.addEventListener('input', ()=>{
-                item.value = item.value.replace(/\D/, '');
-            });
-        });
-
+        input = document.querySelectorAll('input');
+        
     checkNumImputs('input[name="user_phone"]');
 
     const message ={
